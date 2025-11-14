@@ -3,8 +3,6 @@
 **Difficulty:** Medium
 **Tags:** Greedy, Counting, String
 
----
-
 ## Problem Summary
 
 Given a binary string `s`, you want to compute the **maximum** number of operations required to move all `'1'` characters to the **end** of the string.
@@ -17,8 +15,6 @@ A valid operation consists of selecting an index `i` such that:
 Then you swap these characters.
 
 Your task is to determine the **maximum total number of operations** you can perform.
-
----
 
 ## Key Intuition
 
@@ -37,8 +33,6 @@ Why?
 
 * Each earlier `1` tries to move right but is blocked by the start of this zero segment.
 
----
-
 ## Algorithm
 
 1. `countOne = 0` — how many `'1'`s seen so far.
@@ -52,16 +46,12 @@ Why?
 
 This works because each zero block causes **every earlier 1** to be blocked exactly once.
 
----
-
 ## Time & Space Complexity
 
 | Metric | Value                               |
 | ------ | ----------------------------------- |
 | Time   | **O(n)** — single pass              |
 | Space  | **O(1)** — constant extra variables |
-
----
 
 ## Code
 
@@ -88,8 +78,6 @@ public class Solution {
 }
 ```
 
----
-
 ## Explanation Example
 
 For input:
@@ -105,8 +93,6 @@ Steps:
 * Last zero block after `110010` → add 3
 
 Total = **7 operations**.
-
----
 
 ## Notes
 
