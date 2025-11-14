@@ -11,7 +11,6 @@ Given a **sorted** integer array `nums` and an integer `target`, return the **in
 
 You must use an algorithm with **O(log n)** time complexity.
 
-
 ## Key Idea
 
 This is the classic **binary search** algorithm.
@@ -30,7 +29,6 @@ At each step:
 
 Repeat until `L > R`.
 
-
 ## Algorithm
 
 1. Set `L = 0`, `R = n - 1`.
@@ -41,13 +39,13 @@ Repeat until `L > R`.
 3. If found → return `mid`.
 4. If loop ends → return `-1`.
 
+
 ## Time & Space Complexity
 
 | Metric | Value        |
 | ------ | ------------ |
 | Time   | **O(log n)** |
 | Space  | **O(1)**     |
-
 
 ## Code
 
@@ -69,6 +67,14 @@ class Solution {
     }
 }
 ```
+
+## Important Point
+
+* Why `L + (R - L) / 2` instead of `(L + R) / 2`?
+
+  * `(L + R)` can overflow if both are large integers.
+  * Using `L + (R - L) / 2` prevents overflow because `(R - L)` is always safe.
+  * **In this specific LeetCode problem, array size is small so overflow will not occur**, but writing overflow-safe mid calculation is considered **best practice**.
 
 ## Notes
 
