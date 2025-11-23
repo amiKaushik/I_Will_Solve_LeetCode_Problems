@@ -3,8 +3,6 @@
 **Difficulty:** Easy
 **Tags:** Binary Search, Array
 
-# Binary Search — Java Solution
-
 ## Problem
 
 Given a **sorted** integer array `nums` and an integer `target`, return the **index** of `target` if it exists. Otherwise, return **-1**.
