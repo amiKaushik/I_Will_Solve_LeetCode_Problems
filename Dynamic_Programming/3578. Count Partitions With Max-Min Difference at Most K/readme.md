@@ -1,6 +1,6 @@
 # LeetCode 3578 — Count Partitions With Max–Min Difference at Most K
 
-**Difficulty:** Hard
+**Difficulty:** Medium
 **Tags:** Sliding Window, DP, Prefix Sum, TreeMap, Two Pointers
 
 ## Problem
